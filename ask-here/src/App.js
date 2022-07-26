@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+// import { FaTask } from "react-icons/fa";
 import Header from "./Components/Header";
 import QuestionForm from "./Components/QuestionForm";
 import Questions from "./Components/Questions";
@@ -26,11 +27,18 @@ function App() {
       
     }
 ])
+  const deleteQuestion = (id) =>{
+    setQuestions(questions.filter((question) => question.id !== id ))
+    // console.log('delete', id)
+
+  }
   return (
-    <div className="App">
+    <div className="container">
       <Header title="AsKit, Get Answers"/>
       <QuestionForm/>
-      <Questions questions={questions}/>
+      <Questions questions={questions} 
+      onDelete ={deleteQuestion}
+      />
     </div>
   );
 }
