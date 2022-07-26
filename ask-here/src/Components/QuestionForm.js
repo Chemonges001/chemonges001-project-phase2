@@ -2,7 +2,9 @@ import React from 'react'
 
 function QuestionForm() {
   return (
-    <div>QuestionForm</div>
+    <form>
+        <h2>Ask A Question</h2>
+    </form>
   )
 }
 
