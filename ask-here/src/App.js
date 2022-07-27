@@ -6,28 +6,7 @@ import Questions from "./Components/Questions";
 
 function App() {
   const [showAddQuestions, setShowAddQuestions] = useState(false)
-  const [questions, setQuestions] =useState([
-    {
-        id: 1,
-      category: "Mythology",
-      quiz: "What was the punishment for Sysiphus' craftiness?",
-      answer: "Cursed to roll a boulder up a hill for eternity.",
-    },
-    {
-        id: 2,
-      category: "Nature",
-      quiz: "In aeronautics, flaps and slats are used to control what on an aircraft?",
-      answer: "lift",
-      
-    },
-    {
-        id: 3,
-      category: "Computers",
-      quiz: "What was the name of the security vulnerability found in Bash in 2014?",
-      answer: "Shellshock",
-      
-    }
-])
+  const [questions, setQuestions] =useState([])
       // add question
   const addQuestion =(question) =>{
     const id = Math.floor(Math.random() * 1000) +1
