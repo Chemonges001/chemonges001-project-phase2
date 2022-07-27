@@ -7,9 +7,10 @@ function Question({question, onDelete}) {
   const [answers, setAnswers] =useState("")
 
   const addAnswer =(answer) =>{
-    const id = Math.floor(Math.random() * 1000) +1
-    const newAnswer ={id, ...answer}
-    setAnswers([...answers, newAnswer])
+    // const id = Math.floor(Math.random() * 1000) +1
+    // const newAnswer ={id, ...answer}
+    // setAnswers([...answers, newAnswer])
+
 
   }
   return (

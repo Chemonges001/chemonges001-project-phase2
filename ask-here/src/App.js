@@ -5,6 +5,7 @@ import QuestionForm from "./Components/QuestionForm";
 import Questions from "./Components/Questions";
 
 function App() {
+  const [showAddQuestions, setShowAddQuestions] = useState(false)
   const [questions, setQuestions] =useState([
     {
         id: 1,
@@ -16,7 +17,7 @@ function App() {
         id: 2,
       category: "Nature",
       quiz: "In aeronautics, flaps and slats are used to control what on an aircraft?",
-      answer: "Lift",
+      answer: "lift",
       
     },
     {
@@ -31,7 +32,7 @@ function App() {
   const addQuestion =(question) =>{
     const id = Math.floor(Math.random() * 1000) +1
     const newQuestion ={id, ...question}
-    setQuestions([...questions, newQuestion])
+    setQuestions([newQuestion, ...questions])
 
   }
   
@@ -43,8 +44,10 @@ function App() {
   }
   return (
     <div className="container">
-      <Header title="AsKit, Get Answers"/>
-      <QuestionForm onAdd ={addQuestion}/>
+      <Header onAdd={() =>setShowAddQuestions(!showAddQuestions)}
+      showAdd={showAddQuestions}
+      title="AsKit, Get Answers"/>
+      {showAddQuestions && <QuestionForm onAdd ={addQuestion}/>}
       <Questions questions={questions} 
       onDelete ={deleteQuestion}
       />
