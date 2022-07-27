@@ -27,6 +27,8 @@ function App() {
       
     }
 ])
+
+//delete question 
   const deleteQuestion = (id) =>{
     setQuestions(questions.filter((question) => question.id !== id ))
     // console.log('delete', id)
