@@ -27,8 +27,15 @@ function App() {
       
     }
 ])
+      // add question
+  const addQuestion =(question) =>{
+    const id = Math.floor(Math.random() * 1000) +1
+    const newQuestion ={id, ...question}
+    setQuestions([...questions, newQuestion])
 
-//delete question 
+  }
+  
+      //delete question 
   const deleteQuestion = (id) =>{
     setQuestions(questions.filter((question) => question.id !== id ))
     // console.log('delete', id)
@@ -37,7 +44,7 @@ function App() {
   return (
     <div className="container">
       <Header title="AsKit, Get Answers"/>
-      <QuestionForm/>
+      <QuestionForm onAdd ={addQuestion}/>
       <Questions questions={questions} 
       onDelete ={deleteQuestion}
       />

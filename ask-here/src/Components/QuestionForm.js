@@ -1,11 +1,24 @@
 import React, {useState} from 'react'
 
-function QuestionForm() {
+function QuestionForm({onAdd}) {
   const [quiz, setQuiz] = useState('')
   const [category, setCategory] = useState('')
-  const [answer, setAnswer] = useState('')
+  // const [answer, setAnswer] = useState('')
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+
+    if(!quiz){
+      alert('Please Add Quiz')
+      return
+    }
+    onAdd( {quiz, category, } )
+    setQuiz ('')
+    setCategory('')
+    // setAnswer('')
+  }
   return (
-    <form className='add-form'>
+    <form className='add-form' onSubmit={onSubmit}>
         <div className ="form-control">
           <label>Questions</label>
           <input type='text' placeholder='Add a question' value ={quiz} onChange ={(e)=>
@@ -17,12 +30,12 @@ function QuestionForm() {
           <input type='text' placeholder='Add category' value ={category} onChange ={(e)=>
           setCategory(e.target.value)}/>
         </div>
-        <div className ="form-control">
+        {/* <div className ="form-control">
           <label>Answers</label>
           <input type='text' placeholder='Add an answer'value ={answer} onChange ={(e)=>
           setAnswer(e.target.value)}
           />
-        </div>
+        </div> */}
         <input type= 'submit'  value = 'Save Question' className='btn btn-block'/>
     </form>
   )
