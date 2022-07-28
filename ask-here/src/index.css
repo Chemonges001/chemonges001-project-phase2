@@ -147,3 +147,7 @@ footer {
 .label-form{
   font-weight: bold;
 }
+.quiz{
+  display: flex;
+  justify-content: space-between;
+}

@@ -23,7 +23,7 @@ function Question({question, onDelete}) {
   
   return (
     <div className='question'>
-        <h3>{question.quiz} {' '}
+        <h3 className='quiz'>{question.quiz} {' '}
            <FaTimes style ={{color:"red", cursor:"pointer"}}
            onClick={() =>onDelete (question.id)}/>
         </h3>
