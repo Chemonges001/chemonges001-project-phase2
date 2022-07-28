@@ -1,9 +1,24 @@
 {
   "questions": [
     {
-      "quiz": "What year did Kenya gain independence?",
-      "category": "1963",
+      "quiz": "What year did kenya gain independence ",
+      "category": "governance",
       "id": 1
+    },
+    {
+      "quiz": "Who was the Greek god of war ",
+      "category": "Mythology",
+      "id": 2
+    },
+    {
+      "quiz": "What is the best birthday gift for a five year kid?",
+      "category": "Lifestyle.",
+      "id": 3
+    },
+    {
+      "quiz": "Who is the best footballer of all time? Messi, Maradona, or Ronaldo?",
+      "category": "Sports",
+      "id": 4
     }
   ]
 }

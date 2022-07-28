@@ -1,8 +1,11 @@
 import React,{ useState, useEffect } from "react";
-// import { FaTask } from "react-icons/fa";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import QuestionForm from "./Components/QuestionForm";
 import Questions from "./Components/Questions";
+import About from "./Components/About";
+// import { Links } from 'react-router-dom'
 
 function App() {
   const [showAddQuestions, setShowAddQuestions] = useState(false)
@@ -48,15 +51,25 @@ function App() {
 
   }
   return (
-    <div className="container">
+    <Router>
       <Header onAdd={() =>setShowAddQuestions(!showAddQuestions)}
       showAdd={showAddQuestions}
-      title="AsKit, Get Answers"/> 
-      {showAddQuestions && <QuestionForm onAdd ={addQuestion}/>}
-      <Questions questions={questions} 
+      title="AsKit: Get Answers"/>
+    <Routes>
+  
+      <Route path = '/' exact element =
+      {showAddQuestions && <QuestionForm onAdd ={addQuestion}/>}/>
+      
+      <Route path = '/about' element ={<About />}/>
+      <Route path = '/questions' element =
+       {<Questions questions={questions} 
       onDelete ={deleteQuestion}
-      />
-    </div>
+      />}
+    />
+    </Routes>
+    <Footer/>
+   
+  </Router>
   );
 }
 
