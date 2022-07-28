@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
         <p>Copyright &copy; 2022</p>
-        <Link to='/about'>About Us</Link>{'   '}
+        <Link to='/about'>About</Link>{'   '}
         <Link to = '/questions'>Questions</Link>
 
     </footer>
