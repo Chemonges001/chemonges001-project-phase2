@@ -13,7 +13,7 @@ function Answer({onAdd}) {
 
   return (
     <div className ="form-control" onSubmit={onSubmit}>
-          <label>Answers</label>
+          <label className='label-form'>Answers:</label>
           <input type='text' placeholder='Add an answer'value ={answer} onChange ={(e)=>
           setAnswer(e.target.value)}
           />
