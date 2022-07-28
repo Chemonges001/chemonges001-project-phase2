@@ -144,3 +144,6 @@ footer {
   align-items: center;
   display: block;
 }
+.label-form{
+  font-weight: bold;
+}

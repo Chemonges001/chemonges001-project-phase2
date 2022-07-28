@@ -20,13 +20,13 @@ function QuestionForm({onAdd}) {
   return (
     <form className='add-form' onSubmit={onSubmit}>
         <div className ="form-control">
-          <label>Questions</label>
+          <label className='label-form'>Questions</label>
           <input type='text' placeholder='Add a question' value ={quiz} onChange ={(e)=>
           setQuiz(e.target.value)}
           />
         </div>
         <div className ="form-control">
-          <label>Category</label>
+          <label className='label-form'>Category</label>
           <input type='text' placeholder='Add category' value ={category} onChange ={(e)=>
           setCategory(e.target.value)}/>
         </div>
