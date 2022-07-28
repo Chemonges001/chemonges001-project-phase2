@@ -28,7 +28,6 @@ function Question({question, onDelete}) {
            onClick={() =>onDelete (question.id)}/>
         </h3>
         <h4>Category: {question.category}</h4>
-        {/* <p>Answer: {question.answer}</p> */}
         <Answer onAdd={addAnswer}/>
 
     </div>
