@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 
 function Answer({onAdd}) {
@@ -9,13 +9,15 @@ function Answer({onAdd}) {
     onAdd( { answer } )
     setAnswer('')
   }
+
+
   return (
-    <div className ="form-control">
+    <div className ="form-control" onSubmit={onSubmit}>
           <label>Answers</label>
           <input type='text' placeholder='Add an answer'value ={answer} onChange ={(e)=>
           setAnswer(e.target.value)}
           />
-          <button onSubmit={onSubmit}>Reply</button>
+          <button type='submit'>Reply</button>
         </div> 
   )
 }

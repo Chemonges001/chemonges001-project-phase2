@@ -6,18 +6,26 @@ function Question({question, onDelete}) {
 
   const [answers, setAnswers] =useState("")
 
-  const addAnswer =(answer) =>{
-    // const id = Math.floor(Math.random() * 1000) +1
-    // const newAnswer ={id, ...answer}
-    // setAnswers([...answers, newAnswer])
+    const addAnswer = async (answer) =>{
+      const res = await fetch ('http://localhost:4000/questions', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(answer)
+      })
+  
+      const data = await res.json()
+      setAnswers([data, ...answers])
+  
+    }
 
-
-  }
+  
   return (
     <div className='question'>
         <h3>{question.quiz} {' '}
            <FaTimes style ={{color:"red", cursor:"pointer"}}
-           onClick={() =>onDelete (question.i)}/>
+           onClick={() =>onDelete (question.id)}/>
         </h3>
         <h4>Category: {question.category}</h4>
         {/* <p>Answer: {question.answer}</p> */}

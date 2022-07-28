@@ -1,26 +1,9 @@
 {
   "questions": [
     {
-      "id": 1,
-    "category": "Mythology",
-    "quiz": "What was the punishment for Sysiphus' craftiness?",
-    "answer":[""]
-  },
-  {
-      "id": 2,
-    "category": "Nature",
-   "quiz": "In aeronautics, flaps and slats are used to control what on an aircraft?",
-    "answer": [""]
-    
-  },
-  {
-      "id": 3,
-    "category": "Computers",
-    "quiz": "What was the name of the security vulnerability found in Bash in 2014?",
-    "answer": [""]
-  
-  }
-   
+      "quiz": "What year did Kenya gain independence?",
+      "category": "1963",
+      "id": 1
+    }
   ]
-
 }
